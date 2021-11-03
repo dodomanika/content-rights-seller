@@ -1,7 +1,7 @@
 package rightsseller.availability;
 
 public class BaseAggregateRoot {
-    private AggregateId id;
+    protected AggregateId id;
 
     @Override
     public boolean equals(Object o) {
