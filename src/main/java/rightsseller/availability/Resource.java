@@ -16,16 +16,21 @@ public class Resource extends BaseAggregateRoot {
     }
 
     public boolean isAvailable() {
+        //TODO: implement
         return false;
     }
 
     public void block(AggregateId ownerId, Duration timeToLive) {
+        //TODO: implement
     }
 
     public void unblock(AggregateId ownerId, Duration timeToLive) {
+        //TODO: implement
 
     }
 
     public void blockPermanently(AggregateId ownerId, Duration timeToLive) {
+        //TODO: implement
+
     }
 }

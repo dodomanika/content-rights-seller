@@ -11,6 +11,7 @@ public class AvailabilityListener {
     public void handle(BlockRequestedEvent blockRequestedEvent) {
         Resource resource = resourceRepository.load(blockRequestedEvent.getResourceId());
 
+
         if (resource == null) {
             resource = resourceFactory.create(blockRequestedEvent.getResourceId());
         }
