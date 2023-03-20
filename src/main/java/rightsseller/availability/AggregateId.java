@@ -1,12 +1,15 @@
 package rightsseller.availability;
 
+import lombok.EqualsAndHashCode;
+
 import java.util.UUID;
 
+@EqualsAndHashCode
 public class AggregateId {
-    private String aggregateId;
+    private final String id;
 
-    private AggregateId(String aggregateId) {
-        this.aggregateId = aggregateId;
+    private AggregateId(String id) {
+        this.id = id;
     }
 
     public static AggregateId generate() {
@@ -14,22 +17,7 @@ public class AggregateId {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        AggregateId that = (AggregateId) o;
-
-        return aggregateId.equals(that.aggregateId);
-    }
-
-    @Override
-    public int hashCode() {
-        return aggregateId.hashCode();
-    }
-
-    @Override
     public String toString() {
-        return aggregateId;
+        return id;
     }
 }
