@@ -1,12 +1,15 @@
 package rightsseller.availability;
 
+import lombok.RequiredArgsConstructor;
+
+@RequiredArgsConstructor
 public class AvailabilityListener {
 
-    private ResourceRepository resourceRepository;
+    private final ResourceRepository resourceRepository;
 
-    private ResourceFactory resourceFactory;
+    private final ResourceFactory resourceFactory;
 
-    private AvailabilityService availabilityService;
+    private final AvailabilityService availabilityService;
 
     public void handle(BlockRequestedEvent blockRequestedEvent) {
         Resource resource = resourceRepository.load(blockRequestedEvent.getResourceId());
